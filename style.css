@@ -81,7 +81,9 @@ header nav a:hover {
     width: 100%;
     height: auto;
 }
-
+ .card-text{
+    text-align: center;
+ }
 /* Footer */
 footer {
     background-color: #111;
@@ -106,3 +108,26 @@ footer {
         flex: 1 1 100%;
     }
 }
+
+/* Botones login */
+.btn-login, .btn-register {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+.btn-login:hover, .btn-register:hover {
+    filter: brightness(2.5);
+}
+
+/* galeria */
+.carouselExample{
+    max-height: 400px;
+    width: 100%;
+  
+}
+
