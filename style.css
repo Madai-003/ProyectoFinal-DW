@@ -131,3 +131,115 @@ footer {
   
 }
 
+/* redes */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px
+}
+.tile{
+    background:#1a1a1a;
+    border-radius:10px;
+    padding:24px;
+    text-align:center;
+    transition:transform .2s, box-shadow .2s
+}
+.tile:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.4)
+}
+.tile i{
+    font-size:42px;
+    margin-bottom:12px
+}
+.tile h5{
+    margin:0 0 4px
+}
+.tile a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    margin-top:8px
+}
+.spotify{
+    color:#1DB954
+}
+.apple{
+    color:#fff
+}
+.ytmusic{
+    color:#FF0033
+}
+.deezer{
+    color:#24CF5F
+}
+.napster{
+    color:#00A4E4
+}
+.youtube{
+    color:#FF0000
+}
+.instagram{
+    color:#E1306C
+}
+.facebook{
+    color:#1877F2
+}
+.tiktok{
+    color:#fff
+}
+.section-title{
+    color:#ff9800;
+    margin:20px 0 10px
+}
+.subtext{
+    opacity:.8;
+    margin-top:-4px;
+    margin-bottom:16px
+}
+.ratio iframe{
+    border-radius:8px
+}
+
+/* conciertos */
+.gig{
+    background:#1a1a1a;
+    border-radius:10px;
+    overflow:hidden
+}
+.gig img{
+    width:100%;
+    height:220px;
+    object-fit:cover
+}
+.gig .body{
+    padding:16px
+}
+.tag{
+    display:inline-block;
+    background:#ff9800;
+    color:#000;
+    font-weight:bold;
+    padding:2px 8px;
+    border-radius:4px;
+    font-size:12px
+}
+.timeline{
+    border-left:2px solid #333;
+    margin-left:12px;
+    padding-left:16px
+}
+.timeline .item{
+    position:relative;
+    margin:18px 0
+}
+.timeline .item::before{
+    content:'';
+    position:absolute;
+    left:-22px;
+    top:4px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#ff9800
+}
