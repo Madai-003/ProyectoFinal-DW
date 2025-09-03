@@ -1,6 +1,6 @@
 <?php
 session_start();
-require _DIR_.'/db.php';
+require __DIR__.'/db.php';
 
 if(empty($_POST['usuario']) || empty($_POST['password'])){
   http_response_code(400); die('Faltan credenciales');

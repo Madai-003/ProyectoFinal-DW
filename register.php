@@ -1,6 +1,6 @@
 <?php
 session_start();
-require _DIR_.'/db.php';
+require __DIR__.'/db.php';
 
 // Validación rápida
 $required = ['nombre','apellido','fecha_nacimiento','correo','telefono','usuario','password'];

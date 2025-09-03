@@ -4,7 +4,7 @@ $success = "";
 $error   = "";
 
 // conexión centralizada:
-require_once _DIR_ . '/db.php'; 
+require_once __DIR__ . '/db.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email   = isset($_POST["email"])   ? trim($_POST["email"])   : "";
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 <?php
-require_once _DIR_.'/session.php';
+require_once __DIR__.'/session.php';
 if (!isLogged()) {
   header('Location: index.php');
   exit;
@@ -52,7 +52,7 @@ if (!isLogged()) {
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php include _DIR_.'/header.php'; ?>
+<?php include __DIR__.'/header.php'; ?>
 
 <main class="container py-4" style="max-width:720px">
   <h1 class="mb-3">Contáctanos</h1>

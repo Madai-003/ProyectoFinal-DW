@@ -1,5 +1,5 @@
 <?php
-require_once _DIR_.'/session.php';
+require_once __DIR__.'/session.php';
 ?>
 <header class="header">
   <div class="Logo">
@@ -31,4 +31,4 @@ require_once _DIR_.'/session.php';
   </div>
 </header>
 
-<?php include _DIR_.'/auth.php';?>
+<?php include __DIR__.'/auth.php';?>
