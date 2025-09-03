@@ -10,22 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="Logo">
-            <img src="C:/xampp/htdocs/BandaProyectoFinal/img/logo.png" alt="logo">
-        </div>
-        <nav>
-            <a href="index.html">INICIO</a>
-            <a href="galeria.html">GALERIA</a>
-            <a href="redes.html">REDES SOCIALES</a>
-            <a href="contactanos.html">CONCTACTANOS</a>
-            <a href="conciertos.html">CONCIERTOS</a>
-            <a href="estudio.html">ESTUDIO DE GRABACION</a>
-        </nav>
-        <div class="botones"> <botton class="btn-login">LOGIN</botton> 
-            <botton class="btn-register">REGISTER</botton>
-        </div>
-    </header>
+    <?php include __DIR__.'/header.php'; ?>
 
 <main class="container py-4">
   <h1 class="mb-3">Nuestro Estudio</h1>

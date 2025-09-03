@@ -9,28 +9,13 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="Logo">
-            <img src="C:/xampp/htdocs/BandaProyectoFinal/img/logo.png" alt="logo">
-        </div>
-        <nav>
-            <a href="index.html">INICIO</a>
-            <a href="galeria.html">GALERIA</a>
-            <a href="redes.html">REDES SOCIALES</a>
-            <a href="contactanos.html">CONCTACTANOS</a>
-            <a href="conciertos.html">CONCIERTOS</a>
-            <a href="estudio.html">ESTUDIO DE GRABACION</a>
-        </nav>
-        <div class="botones"> <botton class="btn-login">LOGIN</botton> 
-            <botton class="btn-register">REGISTER</botton>
-        </div>
-    </header>
+    <?php include __DIR__.'/header.php'; ?>
 <main class="container py-4">
   <h1 class="mb-3">Próximos conciertos</h1>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="gig">
-        <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img16.jpg" alt="Guatemala City">
+        <img src="img/img16.jpg" alt="Guatemala City">
         <div class="body">
           <span class="tag">NUEVO</span>
           <h5 class="mt-2 mb-1">Guatemala City — Teatro Lux</h5>
@@ -40,7 +25,7 @@
     </div>
     <div class="col-md-4">
       <div class="gig">
-        <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img17.jpg" alt="Antigua Guatemala">
+        <img src="img/img17.jpg" alt="Antigua Guatemala">
         <div class="body">
           <span class="tag">NUEVO</span>
           <h5 class="mt-2 mb-1">Antigua — Ruinas de San José</h5>
@@ -51,7 +36,7 @@
     </div>
     <div class="col-md-4">
       <div class="gig">
-        <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img18.jpg" alt="Quetzaltenango">
+        <img src="img/img18.jpg" alt="Quetzaltenango">
         <div class="body">
           <h5 class="mt-2 mb-1">Quetzaltenango — Teatro Municipal</h5>
           <p class="mb-1">Sáb, 08 Nov 2025 · 8:00 PM</p>

@@ -10,33 +10,18 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="Logo">
-            <img src="C:/xampp/htdocs/BandaProyectoFinal/img/logo.png" alt="logo">
-        </div>
-        <nav>
-            <a href="index.html">INICIO</a>
-            <a href="galeria.html">GALERIA</a>
-            <a href="redes.html">REDES SOCIALES</a>
-            <a href="contactanos.html">CONCTACTANOS</a>
-            <a href="conciertos.html">CONCIERTOS</a>
-            <a href="estudio.html">ESTUDIO DE GRABACION</a>
-        </nav>
-        <div class="botones"> <botton class="btn-login">LOGIN</botton> 
-            <botton class="btn-register">REGISTER</botton>
-        </div>
-    </header>
+    <?php include __DIR__.'/header.php'; ?>
 
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img4.jpg" class="d-block w-100" alt="...">
+      <img src="img/img4.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img5.png" class="d-block w-100" alt="...">
+      <img src="img/img5.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img6.png" class="d-block w-100" alt="...">
+      <img src="img/img6.png" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -51,27 +36,27 @@
 <div class="gallery">
 <div class="card" style="width: 18rem;">
   <a href="https://open.spotify.com/intl-es/album/0CxPbTRARqKUYighiEY9Sz?si=Nb8Ice_ITGWZNt3vsY_sVg">
-      <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img7.jpg" class="card-img-top" alt="...">
+      <img src="img/img7.jpg" class="card-img-top" alt="...">
   </a>
   <div class="card-body">
-    <p class="card-text">USE YOUR ILUSION1 16 CANCIONES</p>
+    <p class="card-text">16 CANCIONES</p>
   </div>
 </div>
 
 <div class="card" style="width: 18rem;">
   <a href="https://open.spotify.com/album/01Z1nufhjxJVXVDuMRmNEM?si=gECyaMV8TkCpb8iJumJFVg">
-    <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img8.jpg" class="card-img-top" alt="...">
+    <img src="img/img8.jpg" class="card-img-top" alt="...">
   </a>
   <div class="card-body">
-    <p class="card-text">LIVE AT READING 24 CANCIONES</p>
+    <p class="card-text">24 CANCIONES</p>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
   <a href="https://open.spotify.com/intl-es/album/7DUvURQ0wfA1kgG8j99frR?si=bq1JaZkrRA6d-4p_E1B-Hw">
-  <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img9.jpg" class="card-img-top" alt="...">
+  <img src="img/img9.jpg" class="card-img-top" alt="...">
   </a>
   <div class="card-body">
-    <p class="card-text">FOR THOSE ABOUT TO ROCK 10 CANCIONES.</p>
+    <p class="card-text">10 CANCIONES.</p>
   </div>
 </div>
 </div>

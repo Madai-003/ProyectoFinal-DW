@@ -9,22 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="Logo">
-            <img src="C:/xampp/htdocs/BandaProyectoFinal/img/logo.png" alt="logo">
-        </div>
-        <nav>
-            <a href="index.html">INICIO</a>
-            <a href="galeria.html">GALERIA</a>
-            <a href="redes.html">REDES SOCIALES</a>
-            <a href="contactanos.html">CONCTACTANOS</a>
-            <a href="conciertos.html">CONCIERTOS</a>
-            <a href="estudio.html">ESTUDIO DE GRABACION</a>
-        </nav>
-        <div class="botones"> <botton class="btn-login">LOGIN</botton> 
-            <botton class="btn-register">REGISTER</botton>
-        </div>
-    </header>
+    <?php include __DIR__.'/header.php'; ?>
 
 <main class="container py-4">
   <h1 class="mb-2">Síguenos y escucha nuestra música</h1>
@@ -54,7 +39,7 @@
       <a href="https://music.youtube.com/channel/UCJJZxoEUuoz3GDHz90tIocQ?si=NvHZqcAcbR9atOpG" target="_blank" rel="noopener">Abrir perfil</a>
        <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://music.youtube.com/playlist?list=OLAK5uy_kpcRMYtIQuxA385XQpKSOfDOC_22uhNjA">
-            <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img15.jpg" class="card-img-top" alt="...">
+            <img src="img/img15.jpg" class="card-img-top" alt="...">
         </a>
       </div>
     </div>
@@ -72,7 +57,7 @@
       <a href="https://www.napster.com/gt/" target="_blank" rel="noopener">Abrir perfil</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://www.napster.com/es/">
-            <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img14.jpg" class="card-img-top" alt="...">
+            <img src="img/img14.jpg" class="card-img-top" alt="...">
         </a>
       </div>
     </div>
@@ -88,7 +73,7 @@
       <a href="https://youtube.com/@scorpions?si=fIi_dI9aMF8aTqRM" target="_blank" rel="noopener">Ir al canal</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://youtu.be/XHeByMUmvj0?si=SF21IvghBJ8_-04x">
-  <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img10.jpg" class="card-img-top" alt="...">
+  <img src="img/img10.jpg" class="card-img-top" alt="...">
   </a>
       </div>
     </div>
@@ -99,7 +84,7 @@
       <a href="https://www.instagram.com/acdc?igsh=YTV6cXM1aWJrZmhr" target="_blank" rel="noopener">Abrir perfil</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://www.instagram.com/reel/DN7SvwnDKD9/?igsh=NzJ1bGp2N3Q3bWZ3">
-  <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img11.jpg" class="card-img-top" alt="...">
+  <img src="img/img11.jpg" class="card-img-top" alt="...">
   </a>
       </div>
     </div>
@@ -110,7 +95,7 @@
       <a href="https://www.facebook.com/share/18ozvJ2Xo2/" target="_blank" rel="noopener">Abrir página</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://www.facebook.com/share/v/17QKJLC6Fu/">
-  <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img12.jpeg" class="card-img-top" alt="...">
+  <img src="img/img12.jpeg" class="card-img-top" alt="...">
   </a>
       </div>
     </div>
@@ -121,7 +106,7 @@
       <a href="https://www.tiktok.com/@therollingstones?_t=ZM-8zIIWc7hlnJ&_r=1" target="_blank" rel="noopener">Abrir perfil</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://vm.tiktok.com/ZMAjN6Gfx/">
-  <img src="C:/xampp/htdocs/BandaProyectoFinal/img/img13.jpg" class="card-img-top" alt="...">
+  <img src="img/img13.jpg" class="card-img-top" alt="...">
   </a>
       </div>
     </div>
