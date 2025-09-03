@@ -1,3 +1,10 @@
+<?php
+require_once _DIR_.'/session.php';
+if (!isLogged()) {
+  header('Location: index.php');
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
