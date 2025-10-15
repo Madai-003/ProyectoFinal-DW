@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/session.php';
+require_once _DIR_.'/session.php';
 if (!isLogged()) {
   header('Location: index.php');
   exit;
@@ -13,10 +13,53 @@ if (!isLogged()) {
     <title>Silver Road</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
+    <style>
+      .gig{
+          background:#1a1a1a;
+          border-radius:10px;
+          overflow:hidden
+      }
+      .gig img{
+          width:100%;
+          height:250px;
+          object-fit:cover
+      }
+      .gig .body{
+          padding:16px
+      }
+      .tag{
+          display:inline-block;
+          background:#ff9800;
+          color:#000;
+          font-weight:bold;
+          padding:2px 8px;
+          border-radius:4px;
+          font-size:12px
+      }
+      .timeline{
+          border-left:2px solid #333;
+          margin-left:12px;
+          padding-left:16px
+      }
+      .timeline .item{
+          position:relative;
+          margin:18px 0
+      }
+      .timeline .item::before{
+          content:'';
+          position:absolute;
+          left:-22px;
+          top:4px;
+          width:12px;
+          height:12px;
+          border-radius:50%;
+          background:#ff9800
+      }
+    </style>
 </head>
 
 <body>
-    <?php include __DIR__.'/header.php'; ?>
+    <?php include _DIR_.'/header.php'; ?>
 <main class="container py-4">
   <h1 class="mb-3">Próximos conciertos</h1>
   <div class="row g-4">
@@ -27,6 +70,7 @@ if (!isLogged()) {
           <span class="tag">NUEVO</span>
           <h5 class="mt-2 mb-1">Guatemala City — Teatro Lux</h5>
           <p class="mb-1">Sáb, 20 Sep 2025 · 8:00 PM</p>
+            <a class="btn btn-primary" href="comprar.php?concierto_id=1">Comprar boletos</a>
         </div>
       </div>
     </div>
@@ -37,7 +81,7 @@ if (!isLogged()) {
           <span class="tag">NUEVO</span>
           <h5 class="mt-2 mb-1">Antigua — Ruinas de San José</h5>
           <p class="mb-1">Vie, 10 Oct 2025 · 7:30 PM</p>
-         
+            <a class="btn btn-primary" href="comprar.php?concierto_id=2">Comprar boletos</a>
         </div>
       </div>
     </div>
@@ -47,7 +91,7 @@ if (!isLogged()) {
         <div class="body">
           <h5 class="mt-2 mb-1">Quetzaltenango — Teatro Municipal</h5>
           <p class="mb-1">Sáb, 08 Nov 2025 · 8:00 PM</p>
-          
+            <a class="btn btn-primary" href="comprar.php?concierto_id=3">Comprar boletos</a>
         </div>
       </div>
     </div>
