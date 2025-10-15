@@ -10,7 +10,7 @@
 
 <body>
 <!--De esta forma el header se puede modificar dependiendo el estado del usuario--> 
-<?php include _DIR_.'/header.php'; ?>
+<?php include __DIR__.'/header.php'; ?>
     <!--ESTO ES PARA LA VISION Y MISION-->   
 <div class="section-vision-mision">
 <div class="card1">
