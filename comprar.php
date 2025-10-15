@@ -1,6 +1,6 @@
 <?php
-require_once _DIR_.'/session.php';
-require_once _DIR_.'/db.php';
+require_once __DIR__.'/session.php';
+require_once __DIR__.'/db.php';
 
 if (!isLogged()) {
   header('Location: login.php');
@@ -213,7 +213,7 @@ $qCols->close();
 
 </head>
 <body>
-<?php include _DIR_.'/header.php'; ?>
+<?php include __DIR__.'/header.php'; ?>
 <main class="container py-4">
 
   <h1 class="mb-3">Compra de boletos</h1>

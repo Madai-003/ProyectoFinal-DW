@@ -1,5 +1,5 @@
 <?php
-require_once _DIR_.'/session.php';
+require_once __DIR__.'/session.php';
 if (!isLogged()) {
   header('Location: index.php');
   exit;
@@ -59,7 +59,7 @@ if (!isLogged()) {
 </head>
 
 <body>
-    <?php include _DIR_.'/header.php'; ?>
+    <?php include __DIR__.'/header.php'; ?>
 <main class="container py-4">
   <h1 class="mb-3">Próximos conciertos</h1>
   <div class="row g-4">

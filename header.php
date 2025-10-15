@@ -1,5 +1,5 @@
 <?php
-require_once _DIR_.'/session.php';
+require_once __DIR__.'/session.php';
 ?>
 <header class="header">
   <div class="Logo">
@@ -15,7 +15,7 @@ require_once _DIR_.'/session.php';
 <?php if (isLogged()): ?>
   <?php
     // Obtener el rol del usuario logueado
-    require_once _DIR_.'/db.php';
+    require_once __DIR__.'/db.php';
     $stmt = $mysqli->prepare("SELECT role FROM usuarios WHERE id = ?");
     $stmt->bind_param("i", $_SESSION['user_id']);
     $stmt->execute();
@@ -46,4 +46,4 @@ require_once _DIR_.'/session.php';
   </div>
 </header>
 
-<?php include _DIR_.'/auth.php';?>
+<?php include __DIR__.'/auth.php';?>

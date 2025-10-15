@@ -7,7 +7,7 @@ function isLogged(): bool {
 
 function currentUser(): ?array {
   if (!isLogged()) return null;
-  require _DIR_.'/db.php';
+  require __DIR__.'/db.php';
   $uid = (int)$_SESSION['user_id'];
   $stmt = $mysqli->prepare("SELECT * FROM usuarios WHERE id = ?");
   $stmt->bind_param('i', $uid);

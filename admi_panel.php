@@ -1,6 +1,6 @@
 <?php
-require_once _DIR_.'/session.php';
-require_once _DIR_.'/db.php';
+require_once __DIR__.'/session.php';
+require_once __DIR__.'/db.php';
 
 if (!isLogged()) { header('Location: login.php'); exit; }
 $admin = currentUser();
@@ -99,7 +99,7 @@ function q($n){ return 'Q'.number_format((float)$n, 2); }
   </style>
 </head>
 <body>
-<?php include _DIR_.'/header.php'; ?>
+<?php include __DIR__.'/header.php'; ?>
 <main class="container py-4">
 
   <div class="d-flex align-items-center justify-content-between mb-3">
