@@ -39,7 +39,7 @@ $mensajes = $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
   </style>
 </head>
 <body>
-<?php include _DIR_.'/header.php'; ?>
+<?php include __DIR__.'/header.php'; ?>
 <main class="container py-4">
 
   <div class="d-flex align-items-center justify-content-between mb-3">
