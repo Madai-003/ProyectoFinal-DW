@@ -1,0 +1,17 @@
+# claves
+config.php
+
+# Carpeta de logs y archivos temporales
+/log/
+/sendgrid_error.log
+*.log
+
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+*.code-workspace
+*.sql
+
+/PHPMailer-master/    # si no usas esa carpeta directamente en producción

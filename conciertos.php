@@ -12,7 +12,7 @@ if (!isLogged()) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silver Road</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <style>
       .gig{
           background:#1a1a1a;
@@ -112,9 +112,16 @@ if (!isLogged()) {
 </main>
 
 <footer>
-    <P>Derechos reservados por Madai</P>
-    <a href="https://github.com/Madai-003/ProyectoFinal-DW">GITHUG</a>
+  <h6>Derechos reservados por Madai</h6>
+  <h6>© 2025 Silver Road | Proyecto Final de Desarrollo Web</h6>
+
+  <a href="https://github.com/Madai-003/ProyectoFinal-DW">
+    <img src="img/github.png" width="30" height="30">
+    <span>GITHUB</span>
+  </a>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+<script defer src="js/nav.js?v=1"></script>
+</body>
 </html>

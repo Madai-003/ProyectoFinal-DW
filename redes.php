@@ -6,13 +6,13 @@
   <title>Silver Road | Redes & Streaming</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <?php include __DIR__.'/header.php'; ?>
 
 <main class="container py-4">
-  <h1 class="mb-2">Síguenos y escucha nuestra música</h1>
+  <h1>Síguenos y escucha nuestra música</h1>
 
   <!-- Streaming -->
   <h2 class="section-title">Plataformas de streaming</h2>
@@ -22,7 +22,7 @@
       <i class="bi bi-spotify"></i>
       <h5>Spotify</h5>
       <small>@silverroad</small>
-      <a href="#" target="_blank" rel="noopener">Abrir perfil</a>
+      <a href="https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC?si=pUjxde4TQYySCsIwbrmuHQ" target="_blank" rel="noopener">Abrir perfil</a>
         <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/3qm84nBOXUEQ2vnTfUTTFC?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
     <div class="tile apple">
@@ -39,7 +39,7 @@
       <a href="https://music.youtube.com/channel/UCJJZxoEUuoz3GDHz90tIocQ?si=NvHZqcAcbR9atOpG" target="_blank" rel="noopener">Abrir perfil</a>
        <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://music.youtube.com/playlist?list=OLAK5uy_kpcRMYtIQuxA385XQpKSOfDOC_22uhNjA">
-            <img src="img/img15.jpg" class="card-img-top" alt="...">
+            <img src="img/img15.jpg" class="card-img-top"  >
         </a>
       </div>
     </div>
@@ -57,7 +57,7 @@
       <a href="https://www.napster.com/gt/" target="_blank" rel="noopener">Abrir perfil</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://www.napster.com/es/">
-            <img src="img/img14.jpg" class="card-img-top" alt="...">
+            <img src="img/img14.jpg" class="card-img-top"  >
         </a>
       </div>
     </div>
@@ -73,7 +73,7 @@
       <a href="https://youtube.com/@scorpions?si=fIi_dI9aMF8aTqRM" target="_blank" rel="noopener">Ir al canal</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://youtu.be/XHeByMUmvj0?si=SF21IvghBJ8_-04x">
-  <img src="img/img10.jpg" class="card-img-top" alt="...">
+  <img src="img/img10.jpg" class="card-img-top"  >
   </a>
       </div>
     </div>
@@ -84,7 +84,7 @@
       <a href="https://www.instagram.com/acdc?igsh=YTV6cXM1aWJrZmhr" target="_blank" rel="noopener">Abrir perfil</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://www.instagram.com/reel/DN7SvwnDKD9/?igsh=NzJ1bGp2N3Q3bWZ3">
-  <img src="img/img11.jpg" class="card-img-top" alt="...">
+  <img src="img/img11.jpg" class="card-img-top"  >
   </a>
       </div>
     </div>
@@ -95,7 +95,7 @@
       <a href="https://www.facebook.com/share/18ozvJ2Xo2/" target="_blank" rel="noopener">Abrir página</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://www.facebook.com/share/v/17QKJLC6Fu/">
-  <img src="img/img12.jpeg" class="card-img-top" alt="...">
+  <img src="img/img12.jpeg" class="card-img-top"  >
   </a>
       </div>
     </div>
@@ -106,15 +106,21 @@
       <a href="https://www.tiktok.com/@therollingstones?_t=ZM-8zIIWc7hlnJ&_r=1" target="_blank" rel="noopener">Abrir perfil</a>
       <div class="ratio ratio-16x9" style="margin-top:10px">
         <a href="https://vm.tiktok.com/ZMAjN6Gfx/">
-  <img src="img/img13.jpg" class="card-img-top" alt="...">
+  <img src="img/img13.jpg" class="card-img-top"  >
   </a>
       </div>
     </div>
   </div>
 </main>
 <footer>
-    <P>Derechos reservados por Madai</P>
-    <a href="https://github.com/Madai-003/ProyectoFinal-DW">GITHUG</a>
+  <h6>Derechos reservados por Madai</h6>
+  <h6>© 2025 Silver Road | Proyecto Final de Desarrollo Web</h6>
+
+  <a href="https://github.com/Madai-003/ProyectoFinal-DW">
+    <img src="img/github.png" width="30" height="30">
+    <span>GITHUB</span>
+  </a>
 </footer>
+<script defer src="js/nav.js?v=1"></script>
 </body>
 </html>

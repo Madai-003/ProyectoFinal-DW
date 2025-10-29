@@ -12,28 +12,32 @@ if (!$user || $user['role'] !== 'user') {
   header('Location: admin_mensajes.php');
   exit;
 }
-?>
 
-<?php
-require_once __DIR__.'/header.php';
-require_once __DIR__.'/db.php';
-if (session_status() === PHP_SESSION_NONE) session_start();
+$emailSesion = $user['correo'] ?? ($_SESSION['correo'] ?? null);
+if (!$emailSesion) {
+  header('Location: login.php');
+  exit;
+}
 
-$ok = false; $err = null;
+$ok = false; 
+$err = null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $email   = trim($_POST['email']   ?? '');
   $asunto  = trim($_POST['asunto']  ?? '');
   $mensaje = trim($_POST['mensaje'] ?? '');
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $err = 'Correo inválido';
-  elseif ($asunto === '' || $mensaje === '')      $err = 'Completa asunto y mensaje';
-  else {
+  if ($asunto === '' || $mensaje === '') {
+    $err = 'Completa asunto y mensaje';
+  } else {
     $stmt = $mysqli->prepare("INSERT INTO mensajes_contacto (email, asunto, mensaje) VALUES (?, ?, ?)");
-    $stmt->bind_param('sss', $email, $asunto, $mensaje);
-    $ok = $stmt->execute();
-    if (!$ok) $err = 'No se pudo guardar el mensaje';
-    $stmt->close();
+    if (!$stmt) {
+      $err = 'No se pudo preparar la consulta';
+    } else {
+      $stmt->bind_param('sss', $emailSesion, $asunto, $mensaje);
+      $ok = $stmt->execute();
+      if (!$ok) $err = 'No se pudo guardar el mensaje';
+      $stmt->close();
+    }
   }
 }
 ?>
@@ -41,9 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Estudio & Contáctanos</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css"/>
 <style>
   :root{
     --bg:#0f0f10; --panel:#161718; --panel2:#1d1f22; --text:#e9e9e9; --muted:#b9b9b9;
@@ -55,15 +59,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   .panel{ background:var(--panel); border:1px solid var(--border); border-radius:12px; }
   .form-control, .form-select{ background:var(--panel2); color:var(--text); border:1px solid var(--border); }
   .form-control::placeholder{ color:#9ca3af; }
+  .form-control:disabled { background-color: var(--panel2) !important; color: var(--muted) !important; opacity: 1;}
   .btn-primary{ background:var(--accent); border-color:var(--accent); }
   .btn-primary:hover{ background:var(--accent2); border-color:var(--accent2); }
   .map-wrap{ border-radius:12px; overflow:hidden; border:1px solid var(--border); }
   .item{ margin-bottom:.35rem; }
   a, a:hover{ color:#fff; }
 </style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<?php include __DIR__.'/header.php'; ?>
 <main class="container section" id="estudio">
   <?php if($ok): ?>
     <div class="alert alert-success">¡Gracias! Tu mensaje fue enviado correctamente.</div>
@@ -107,23 +113,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="col-lg-8">
       <form method="post" class="panel p-4">
         <div class="mb-3">
-          <label class="form-label">Correo electrónico</label>
-          <input type="email" name="email" class="form-control" placeholder="tucorreo@ejemplo.com"
-                 value="<?= htmlspecialchars($_POST['email'] ?? ($_SESSION['email'] ?? '')) ?>">
+          <label class="form-label">Se enviará desde</label>
+          <input type="text" class="form-control" value="<?= htmlspecialchars($emailSesion) ?>" disabled>
         </div>
         <div class="mb-3">
           <label class="form-label">Asunto</label>
-          <input type="text" name="asunto" class="form-control" placeholder="Reserva, cotización, etc.">
+          <input type="text" name="asunto" class="form-control" placeholder="Reserva, cotización, etc." required>
         </div>
         <div class="mb-3">
           <label class="form-label">Mensaje</label>
-          <textarea name="mensaje" rows="6" class="form-control" placeholder="Cuéntanos tu proyecto..."></textarea>
+          <textarea name="mensaje" rows="6" class="form-control" placeholder="Cuéntanos tu proyecto..." required></textarea>
         </div>
         <button class="btn btn-primary">Enviar</button>
       </form>
     </div>
   </div>
 </section>
+<footer>
+  <h6>Derechos reservados por Madai</h6>
+  <h6>© 2025 Silver Road | Proyecto Final de Desarrollo Web</h6>
 
+  <a href="https://github.com/Madai-003/ProyectoFinal-DW">
+    <img src="img/github.png" width="30" height="30">
+    <span>GITHUB</span>
+  </a>
+</footer>
+<script defer src="js/nav.js?v=1"></script>
 </body>
 </html>

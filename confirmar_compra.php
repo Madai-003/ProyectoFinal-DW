@@ -56,14 +56,12 @@ try {
   $cargos = $subtotal * $percent + count($rows) * $fixed_per_ticket;
   $total  = $subtotal + $cargos;
 
-  // Crear orden
   $stmt = $mysqli->prepare("INSERT INTO ordenes (concierto_id, usuario_id, email, subtotal, cargos, total, creado_en) VALUES (?, ?, ?, ?, ?, ?, NOW())");
   $stmt->bind_param('iisddd', $concierto_id, $usuario_id, $email, $subtotal, $cargos, $total);
   $stmt->execute();
   $orden_id = $stmt->insert_id;
   $stmt->close();
 
-  // Insertar boletos y marcar asientos como vendidos
   $insBoleto = $mysqli->prepare("INSERT INTO boletos (orden_id, asiento_id, precio) VALUES (?, ?, ?)");
   $updSeat   = $mysqli->prepare("UPDATE asientos SET estado='VENDIDO' WHERE id = ?");
 

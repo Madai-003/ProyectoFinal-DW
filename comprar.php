@@ -21,7 +21,6 @@ if ($user['role'] !== 'user') {
 $concierto_id = isset($_GET['concierto_id']) ? (int)$_GET['concierto_id'] : 0;
 if ($concierto_id <= 0) { http_response_code(400); echo "Concierto inválido"; exit; }
 
-// Traer asientos del concierto
 $stmt = $mysqli->prepare("
   SELECT id, seccion, fila, col, precio, estado
   FROM asientos
@@ -34,7 +33,6 @@ $res = $stmt->get_result();
 $asientos = $res->fetch_all(MYSQLI_ASSOC);
 $stmt->close();
 
-// Agrupar por sección
 $porSeccion = [];
 $disponibles = 0;
 foreach ($asientos as $a) {
@@ -68,7 +66,7 @@ $qCols->close();
   <meta charset="UTF-8" />
   <title>Comprar boletos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
   <style>
   :root{
     --bg: #0f0f10;          /* fondo principal */
@@ -144,7 +142,7 @@ $qCols->close();
     box-shadow: 0 8px 30px rgba(229,57,53,.25) inset, 0 6px 18px rgba(0,0,0,.35);
     margin-bottom: 28px;
   }
-  /* ===== Centrar mapa de asientos ===== */
+  /* Centrar mapa de asientos */
 .seccion {
   display: flex;
   flex-direction: column;
@@ -154,7 +152,7 @@ $qCols->close();
 
 .seccion-title {
   width: 100%;
-  text-align: center;         /* Centra el texto del nombre de la sección */
+  text-align: center;
   color: var(--muted);
   font-weight: 700;
   margin-bottom: 10px;
@@ -162,14 +160,13 @@ $qCols->close();
 
 .grid{
   display:grid;
-  /* Quita/borra esta: grid-template-columns: repeat(15, 28px); */
   grid-gap:10px 12px;
   padding:14px 10px 22px;
   background: var(--panel);
   border:1px dashed var(--border);
   border-radius:12px;
   margin-bottom:18px;
-  justify-content:center; /* ya lo tienes para centrar */
+  justify-content:center;
 }
 
   .seat{
@@ -193,19 +190,16 @@ $qCols->close();
     box-shadow: 0 0 0 4px rgba(255,255,255,.10);
   }
 
-  /* Leyenda */
   .legend{ color: var(--muted); }
   .legend .dot{ width:14px; height:14px; display:inline-block; border-radius:50%; margin-right:6px; border:1px solid #777; vertical-align:middle; }
   .dot.disp{ background: var(--seat-free); border-color:#8a8a8a; }
   .dot.sold{ background: var(--seat-sold); border-color:#a21616; }
   .dot.sel { background: var(--seat-free); outline:2px solid #fff; }
 
-  /* Totales */
   .totales b{ font-size:1.2rem; }
   .totales .card-body{ background: var(--panel-2); border-radius: 8px; }
   .totales .d-flex span{ color: var(--muted); }
 
-  /* Espaciados responsivos */
   @media (max-width: 768px){
     .grid{ grid-template-columns: repeat(12, 26px); grid-gap: 8px; }
   }

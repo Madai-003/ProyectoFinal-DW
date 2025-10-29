@@ -1,15 +1,18 @@
+<?php
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silver Road</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<!--De esta forma el header se puede modificar dependiendo el estado del usuario--> 
 <?php include __DIR__.'/header.php'; ?>
     <!--ESTO ES PARA LA VISION Y MISION-->   
 <div class="section-vision-mision">
@@ -67,20 +70,20 @@
  <!--ESTO ES PARA LAS IMAGENES-->  
 <div class="gallery">
 <div class="card" style="width: 18rem;">
-  <img src="img/img1.jpg" class="card-img-top" alt="...">
+  <img src="img/img1.jpg" class="card-img-top"  >
   <div class="card-body">
     <p class="card-text">Energía y misterio en cada acorde.</p>
   </div>
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="img/img2.jpeg" class="card-img-top" alt="...">
+  <img src="img/img2.jpeg" class="card-img-top"  >
   <div class="card-body">
     <p class="card-text">Conectamos con el público en cada canción.</p>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
-  <img src="img/img3.jpg" class="card-img-top" alt="...">
+  <img src="img/img3.jpg" class="card-img-top"  >
   <div class="card-body">
     <p class="card-text">Puro rock, sin filtros ni límites.</p>
   </div>
@@ -88,9 +91,14 @@
 </div>
 
 <footer>
-    <P>Derechos reservados por Madai</P>
-    <a href="https://github.com/Madai-003/ProyectoFinal-DW">GITHUG</a>
-</footer>
+  <h6>Derechos reservados por Madai</h6>
+  <h6>© 2025 Silver Road | Proyecto Final de Desarrollo Web</h6>
 
+  <a href="https://github.com/Madai-003/ProyectoFinal-DW">
+    <img src="img/github.png" width="30" height="30">
+    <span>GITHUB</span>
+  </a>
+</footer>
+<script defer src="js/nav.js?v=1"></script>
 </body>
 </html>

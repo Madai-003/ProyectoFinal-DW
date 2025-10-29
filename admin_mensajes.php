@@ -25,7 +25,7 @@ $mensajes = $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
   <title>Mensajes de contacto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
   <style>
     :root{ --bg:#0f0f10; --panel:#161718; --panel2:#1d1f22; --text:#e9e9e9; --muted:#b9b9b9; --border:#2b2d31; --accent:#e53935; }
     body{ background:var(--bg); color:var(--text); }
@@ -91,5 +91,6 @@ $mensajes = $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
 
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="js/nav.js?v=1"></script>
 </body>
 </html>

@@ -12,9 +12,8 @@ $CONCIERTOS = [
   3 => 'Quetzaltenango — Teatro Municipal',
 ];
 
-/* ==== Concierto seleccionado (GET) ==== */
 $concierto_id = isset($_GET['concierto_id']) ? (int)$_GET['concierto_id'] : 1;
-/* Si el id no existe en BD, intenta usar el primero disponible */
+
 $stmt = $mysqli->prepare("SELECT DISTINCT concierto_id FROM asientos ORDER BY concierto_id");
 $stmt->execute(); $rs = $stmt->get_result();
 $idsDisponibles = array_map(fn($r)=> (int)$r['concierto_id'], $rs->fetch_all(MYSQLI_ASSOC));
@@ -83,7 +82,7 @@ function q($n){ return 'Q'.number_format((float)$n, 2); }
   <title>Panel de Administración</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
   <style>
     :root{
       --bg:#0f0f10; --panel:#161718; --panel2:#1d1f22; --text:#e9e9e9; --muted:#b9b9b9; --border:#2b2d31; --accent:#e53935;
@@ -119,9 +118,6 @@ function q($n){ return 'Q'.number_format((float)$n, 2); }
             </option>
           <?php endforeach; ?>
         </select>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-outline-light">Ver</button>
       </div>
       <div class="col-12 col-lg-auto ms-lg-auto">
         <div class="d-flex gap-3 flex-wrap">
@@ -233,5 +229,7 @@ function q($n){ return 'Q'.number_format((float)$n, 2); }
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="js/nav.js?v=1"></script>
 </body>
 </html>
+
